@@ -1,0 +1,10 @@
+﻿@model BashModels.Models.Comment
+
+
+@using (Html.BeginForm("AddComment", "Post", FormMethod.Post))
+{
+      @Html.LabelFor(model => model.Text)
+      @Html.EditorFor(model => model.Text);
+}
+
+

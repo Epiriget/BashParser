@@ -1,0 +1,13 @@
+﻿@model IEnumerable<BashModels.Models.Post>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of posts from bash.io</h2>
+
+@foreach (BashModels.Models.Post b in Model)
+{
+      <p>@b.Date            id: @b.PostID</p>
+      @Html.ActionLink("PostInfo", "Details", "Post",  new {id = b.PostID}, null)
+}
